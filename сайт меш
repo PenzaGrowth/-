@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Меш (Basement) — барбершоп в Пензе, ул. Кирова, 63</title>
+<meta name="description" content="Барбершоп «Меш» (Basement) в Пензе: мужские стрижки, оформление бороды. ул. Кирова, 63, цокольный этаж, 30 метров от пл. Ленина. Ежедневно 12:00–19:00. Тел. +7 (906) 157-55-78">
+<style>
+  :root{
+    --bg:#14110e; --bg2:#1c1814; --card:#221d18; --ink:#efe9e0; --muted:#a89f92;
+    --accent:#d9a441; --accent2:#c0563a; --line:#37312a; --radius:16px;
+    --shadow:0 12px 34px rgba(0,0,0,.45);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(20,17,14,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:2px;color:var(--ink);text-decoration:none}
+  .logo .tag{font-size:10.5px;font-weight:700;letter-spacing:1.5px;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:2px 7px}
+  .nav-links{display:flex;gap:24px;list-style:none}
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:14.5px;font-weight:600;opacity:.85}
+  .nav-links a:hover{color:var(--accent);opacity:1}
+  .nav-phone{font-weight:800;color:var(--accent);text-decoration:none;white-space:nowrap}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+  .burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0}
+
+  .hero{padding:80px 0 66px;background:
+      radial-gradient(800px 380px at 85% -10%, rgba(217,164,65,.13), transparent 60%),
+      radial-gradient(650px 340px at -10% 110%, rgba(192,86,58,.12), transparent 60%)}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:700;color:var(--muted)}
+  .badge .star{color:var(--accent)}
+  h1{font-size:clamp(32px,5.4vw,56px);line-height:1.1;margin:22px 0 14px;letter-spacing:-.5px}
+  h1 em{font-style:normal;color:var(--accent)}
+  .lead{font-size:clamp(15.5px,2vw,19px);color:var(--muted);max-width:620px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none;transition:.2s;border:2px solid transparent}
+  .btn-primary{background:var(--accent);color:#1c1405}
+  .btn-primary:hover{background:#e7b553;transform:translateY(-1px)}
+  .btn-ghost{border-color:var(--accent2);color:var(--accent2);background:transparent}
+  .btn-ghost:hover{background:var(--accent2);color:#fff}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:30px;margin-top:46px}
+  .fact b{display:block;font-size:21px;color:var(--accent)}
+  .fact span{font-size:13.5px;color:var(--muted)}
+
+  section{padding:64px 0}
+  .section-title{font-size:clamp(24px,3.4vw,36px);letter-spacing:-.4px;margin-bottom:8px}
+  .section-sub{color:var(--muted);max-width:620px;margin-bottom:34px}
+
+  .price{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;max-width:640px}
+  .price-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 26px;border-bottom:1px dashed var(--line)}
+  .price-row:last-child{border-bottom:0}
+  .price-row .name{font-weight:700;font-size:17px}
+  .price-row .desc{display:block;font-size:13.5px;color:var(--muted);font-weight:400;margin-top:2px}
+  .price-row .sum{font-weight:800;font-size:20px;color:var(--accent);white-space:nowrap}
+  .price-note{padding:14px 26px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line)}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+  .card h3{font-size:17.5px;margin-bottom:8px;color:var(--accent)}
+  .card p{font-size:14.5px;color:var(--muted)}
+
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .rev{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .rev .stars{color:var(--accent);letter-spacing:2px;margin-bottom:10px}
+  .rev p{font-size:14.5px;color:var(--ink);opacity:.9;margin-bottom:12px}
+  .rev b{font-size:13px;color:var(--muted)}
+
+  .contacts-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:start}
+  .info-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+  .info-row{padding:14px 0;border-bottom:1px dashed var(--line)}
+  .info-row:last-child{border-bottom:0}
+  .info-row b{display:block;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+  .info-row a{color:var(--ink);text-decoration:none;font-weight:700;font-size:16.5px}
+  .info-row a:hover{color:var(--accent)}
+  .info-row div p{font-size:15px}
+  .map-box{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#241f19}
+  .map-box iframe{width:100%;height:300px;border:0;display:block}
+
+  footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:13px}
+  .foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+  @media (max-width:860px){.rev-grid,.grid2,.contacts-grid{grid-template-columns:1fr}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#1c1814;flex-direction:column;padding:18px 20px;gap:14px;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.burger{display:block}.nav-phone{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="4" y="10" width="24" height="4" rx="1" fill="#d9a441"/>
+        <rect x="4" y="18" width="24" height="4" rx="1" fill="#c0563a"/>
+        <circle cx="16" cy="6" r="3" stroke="#efe9e0" stroke-width="2"/>
+      </svg>
+      МЕШ <span class="tag">BARBERSHOP</span>
+    </a>
+    <ul class="nav-links" id="menu">
+      <li><a href="#prices">Цены</a></li>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#reviews">Отзывы</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <a class="nav-phone" href="tel:+79061575578">+7 (906) 157-55-78</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <span class="badge"><span class="star">★</span> «Хорошее место» — рейтинг на Яндекс Картах</span>
+      <h1>Барбершоп <em>«Меш»</em><br>в цоколе на Кирова, 63</h1>
+      <p class="lead">Мужские стрижки и борода в самом центре Пензы — в 30 метрах от площади Ленина.
+        Спуститесь вниз по лестнице — и попадёте в своё пространство: камерно, стильно, без суеты.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:+79061575578">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+          Записаться по телефону
+        </a>
+        <a class="btn btn-ghost" href="https://vk.com/club236336968" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 17.5c-4.8 0-7.6-3.3-7.7-8.8 0-.4.2-.6.5-.6h1.7c.3 0 .5.2.6.5.4 2.3 1.7 4.2 3.6 5.4-.1-1.2-.5-2.1-1.3-2.6-.3-.2-.4-.5-.2-.8l.9-1.1c.2-.3.6-.3.9-.1 1.5 1 2.4 2.9 2.4 5.2v.6c0 .2-.1.3-.3.4-.6.4-1.3.6-2.1.6zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm6.6 13.8c-.1.3-.4.5-.7.5h-1.8c-.3 0-.5-.2-.6-.5-.2-.7-.6-1.5-1.2-2.2 1.4-.9 2.4-2.5 2.7-4.6 0-.4.2-.6.6-.6h1.7c.4 0 .6.3.6.6-.1 2.9-1 5.2-1.3 6.8z"/></svg>
+          Мы ВКонтакте
+        </a>
+      </div>
+      <div class="hero-facts">
+        <div class="fact"><b>12:00–19:00</b><span>ежедневно, без выходных</span></div>
+        <div class="fact"><b>30 м</b><span>от площади Ленина</span></div>
+        <div class="fact"><b>Wi-Fi</b><span>и оплата картой</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="prices">
+    <div class="wrap">
+      <h2 class="section-title">Цены</h2>
+      <p class="section-sub">Честный прайс без сюрпризов. Все инструменты стерилизуются, работаем на качественной косметике.</p>
+      <div class="price">
+        <div class="price-row"><div class="name">Мужская стрижка<span class="desc">консультация, мытьё, стрижка ножницами и машинкой, укладка</span></div><div class="sum">1 400 ₽</div></div>
+        <div class="price-row"><div class="name">Оформление бороды<span class="desc">подбор формы, стрижка бороды и усов, опасная бритва</span></div><div class="sum">800 ₽</div></div>
+        <div class="price-row"><div class="name">Стрижка + борода<span class="desc">комплекс: стрижка, борода, укладка — выгоднее, чем по отдельности</span></div><div class="sum">1 700 ₽</div></div>
+        <div class="price-note">Цены носят информационный характер и не являются публичной офертой. Точную стоимость уточняйте по телефону.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="section-title">Почему «Меш»</h2>
+      <p class="section-sub">Мы прячемся в цоколе не случайно — здесь своя атмосфера.</p>
+      <div class="grid2">
+        <div class="card"><h3>Центр города</h3><p>Кирова, 63 — улица в двух шагах от пл. Ленина. Удобно зайти после работы или в обеденный перерыв.</p></div>
+        <div class="card"><h3>Можно с собакой</h3><p>Приводите четвероногих друзей — они тоже рады гостям. Ждём в лаунж-зоне с Wi-Fi.</p></div>
+        <div class="card"><h3>Барбер, а не «парикмахер»</h3><p>Работаем со спецификой мужских стрижек и бород: форма под структуру волос и тип лица, а не «как получится».</p></div>
+        <div class="card"><h3>Запись без очередей</h3><p>Один звонок — и кресло ждёт именно вас. Никакого ожидания в коридоре под журналы 2010 года.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <h2 class="section-title">Отзывы</h2>
+      <p class="section-sub">Нас хвалят на Яндекс Картах и в городских справочниках — средняя оценка 5,0.</p>
+      <div class="rev-grid">
+        <div class="rev"><div class="stars">★★★★★</div><p>«Лучший барбершоп в центре. Атмосфера, музыка, кофе — а стрижка всегда ровно такая, как просишь».</p><b>Отзыв с Яндекс Карт</b></div>
+        <div class="rev"><div class="stars">★★★★★</div><p>«Ходим сюда всей компанией. Борода после оформления держит форму неделями».</p><b>Отзыв с Яндекс Карт</b></div>
+        <div class="rev"><div class="stars">★★★★★</div><p>«Цоколь, кирпич, кресла — всё как надо. Записался, пришёл, ушёл красивым. Рекомендую».</p><b>Отзыв с Яндекс Карт</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="section-title">Контакты</h2>
+      <p class="section-sub">Ищите вывеску у подъезда на Кирова, 63 — и спускайтесь вниз по лестнице.</p>
+      <div class="contacts-grid">
+        <div class="info-card">
+          <div class="info-row"><div><b>Адрес</b><p>г. Пенза, ул. Кирова, 63, цокольный этаж<br>(30 м от пл. Ленина)</p></div></div>
+          <div class="info-row"><div><b>Телефон</b><a href="tel:+79061575578">+7 (906) 157-55-78</a></div></div>
+          <div class="info-row"><div><b>Часы работы</b><p>ежедневно с 12:00 до 19:00</p></div></div>
+          <div class="info-row"><div><b>ВКонтакте</b><a href="https://vk.com/club236336968" target="_blank" rel="noopener">vk.com — барбершоп Basement</a></div></div>
+          <div class="info-row"><div><b>Оплата</b><p>наличные, перевод с карты</p></div></div>
+        </div>
+        <div class="map-box">
+          <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9F%D0%B5%D0%BD%D0%B7%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%2063" loading="lazy" title="Карта — барбершоп Меш"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Барбершоп «Меш» (Basement), Пенза</span>
+    <span>Спускайся. Стригись. Возвращайся.</span>
+  </div>
+</footer>
+
+<script>
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){ menu.classList.toggle('open'); });
+  menu.addEventListener('click', function(e){ if (e.target.tagName === 'A') menu.classList.remove('open'); });
+</script>
+
+</body>
+</html>
